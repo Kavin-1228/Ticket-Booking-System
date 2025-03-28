@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticketing System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        form, .ticket-list {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color:rgb(8, 141, 48);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #3cff00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ticketing System</h1>
+        <form id="ticketForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="from">From:</label>
+            <select id="from" name="from" required>
+                <option value="">Select From</option>
+                <option value="Ariyalur">Ariyalur</option>
+                <option value="Chengalpattu">Chengalpattu</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Cuddalore">Cuddalore</option>
+                <option value="Dharmapuri">Dharmapuri</option>
+                <option value="Dindigul">Dindigul</option>
+                <option value="Erode">Erode</option>
+                <option value="Kallakurichi">Kallakurichi</option>
+                <option value="Kancheepuram">Kancheepuram</option>
+                <option value="Kanyakumari">Kanyakumari</option>
+                <option value="Karur">Karur</option>
+                <option value="Krishnagiri">Krishnagiri</option>
+                <option value="Madurai">Madurai</option>
+                <option value="Mayiladuthurai">Mayiladuthurai</option>
+                <option value="Nagapattinam">Nagapattinam</option>
+                <option value="Namakkal">Namakkal</option>
+                <option value="Nilgiris">Nilgiris</option>
+                <option value="Perambalur">Perambalur</option>
+                <option value="Pudukkottai">Pudukkottai</option>
+                <option value="Ramanathapuram">Ramanathapuram</option>
+                <option value="Ranipet">Ranipet</option>
+                <option value="Salem">Salem</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Sivaganga">Sivaganga</option>
+                <option value="Thanjavur">Thanjavur</option>
+                <option value="Theni">Theni</option>
+                <option value="Thoothukudi">Thoothukudi</option>
+                <option value="Tiruchirappalli">Tiruchirappalli</option>
+                <option value="Tirunelveli">Tirunelveli</option>
+                <option value="Tirupattur">Tirupattur</option>
+                <option value="Tiruppur">Tiruppur</option>
+                <option value="Tiruvallur">Tiruvallur</option>
+                <option value="Tiruvannamalai">Tiruvannamalai</option>
+                <option value="Tiruvarur">Tiruvarur</option>
+                <option value="Vellore">Vellore</option>
+                <option value="Viluppuram">Viluppuram</option>
+                <option value="Virudhunagar">Virudhunagar</option>
+            </select>
+
+
+            <label for="to">To:</label>
+            <select id="to" name="to" required>
+                <option value="">Select To</option>
+                <option value="Ariyalur">Ariyalur</option>
+                <option value="Chengalpattu">Chengalpattu</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Cuddalore">Cuddalore</option>
+                <option value="Dharmapuri">Dharmapuri</option>
+                <option value="Dindigul">Dindigul</option>
+                <option value="Erode">Erode</option>
+                <option value="Kallakurichi">Kallakurichi</option>
+                <option value="Kancheepuram">Kancheepuram</option>
+                <option value="Kanyakumari">Kanyakumari</option>
+                <option value="Karur">Karur</option>
+                <option value="Krishnagiri">Krishnagiri</option>
+                <option value="Madurai">Madurai</option>
+                <option value="Mayiladuthurai">Mayiladuthurai</option>
+                <option value="Nagapattinam">Nagapattinam</option>
+                <option value="Namakkal">Namakkal</option>
+                <option value="Nilgiris">Nilgiris</option>
+                <option value="Perambalur">Perambalur</option>
+                <option value="Pudukkottai">Pudukkottai</option>
+                <option value="Ramanathapuram">Ramanathapuram</option>
+                <option value="Ranipet">Ranipet</option>
+                <option value="Salem">Salem</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Sivaganga">Sivaganga</option>
+                <option value="Thanjavur">Thanjavur</option>
+                <option value="Theni">Theni</option>
+                <option value="Thoothukudi">Thoothukudi</option>
+                <option value="Tiruchirappalli">Tiruchirappalli</option>
+                <option value="Tirunelveli">Tirunelveli</option>
+                <option value="Tirupattur">Tirupattur</option>
+                <option value="Tiruppur">Tiruppur</option>
+                <option value="Tiruvallur">Tiruvallur</option>
+                <option value="Tiruvannamalai">Tiruvannamalai</option>
+                <option value="Tiruvarur">Tiruvarur</option>
+                <option value="Vellore">Vellore</option>
+                <option value="Viluppuram">Viluppuram</option>
+                <option value="Virudhunagar">Virudhunagar</option>
+            </select>
+
+
+            <label for="timing">Timing (HH:MM):</label>
+            <input type="time" id="timing" name="timing" required>
+
+            <label for="travelDate">Date of Travel:</label>
+            <input type="date" id="travelDate" name="travelDate" required>
+
+            <button type="submit">Create Ticket</button>
+        </form>
+
+        <button id="viewTickets">View My Tickets</button>
+        <div class="ticket-list" id="ticketList"></div>
+    </div>
+
+    <script>
+        document.getElementById('ticketForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const from = document.getElementById('from').value;
+            const to = document.getElementById('to').value;
+            const timing = document.getElementById('timing').value;
+            const bookingDate = new Date().toLocaleDateString();
+            const travelDate = document.getElementById('travelDate').value;
+            const formattedTravelDate = new Date(travelDate).toLocaleDateString('en-GB');
+            const ticketId = Math.random().toString(36).substr(2, 8).toUpperCase();
+            const ticket = {
+                id: ticketId,
+                user: username,
+                from: from,
+                to: to,
+                timing: timing,
+                bookingDate: bookingDate,
+                travelDate: formattedTravelDate,
+                status: 'Open Reservation'
+            };
+
+            let tickets = JSON.parse(localStorage.getItem('tickets')) || [];
+            tickets.push(ticket);
+            localStorage.setItem('tickets', JSON.stringify(tickets));
+
+            alert(`Ticket created successfully! Your ticket ID is: ${ticketId}`);
+            document.getElementById('ticketForm').reset();
+        });
+
+        document.getElementById('viewTickets').addEventListener('click', function() {
+            const username = document.getElementById('username').value;
+            let tickets = JSON.parse(localStorage.getItem('tickets')) || [];
+            const userTickets = tickets.filter(ticket => ticket.user === username);
+            const ticketList = document.getElementById('ticketList');
+
+            ticketList.innerHTML = '';
+            if (userTickets.length > 0) {
+                userTickets.forEach(ticket => {
+                    const ticketItem = document.createElement('div');
+                    ticketItem.innerHTML = `
+                        <strong>Ticket ID:</strong> ${ticket.id} <br>
+                        <strong>From:</strong> ${ticket.from} <br>
+                        <strong>To:</strong> ${ticket.to} <br>
+                        <strong>Timing:</strong> ${ticket.timing} <br>
+                        <strong>Date of Travel:</strong> ${ticket.travelDate} <br>
+                        <strong>Booking Date:</strong> ${ticket.bookingDate} <br>
+                        <strong>Status:</strong> ${ticket.status} <br><br>
+                    `;
+                    ticketItem.style.border = "1px solid #ccc";
+                    ticketItem.style.padding = "10px";
+                    ticketItem.style.marginBottom = "10px";
+                    ticketList.appendChild(ticketItem);
+                });
+            } else {
+                ticketList.textContent = 'No tickets found.';
+            }
+        });
+    </script>
+</body>
+</html>
